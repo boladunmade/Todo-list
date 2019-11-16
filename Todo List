@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Login form</title>
+    <script>
+  window.onload = function() {
+  var list = document.getElementById("list");
+  var text = document.getElementById("text");
+  var btn = document.getElementById("btn");
+
+  btn.addEventListener("click", function() {
+    var newelement = document.createElement("li");
+    newelement.innerHTML = text.value;
+    list.appendChild(newelement);
+    text.value = "";
+    text.style.color = green;
+  });
+};
+  
+    
+    
+    
+    </script>
+  </head>
+  <body>
+    <center>
+      <fieldset id="field">
+        <h2>ToDo List</h2>
+
+        <input type="text" id="text" />
+        <button id="btn">Enter Todo</button>
+        <ol id="list"></ol>
+      </fieldset>
+    </center>
+    <style>
+      #field {
+        margin-top: 70px;
+        width: 400px;
+        height: 400px;
+        border-radius: 15px;
+        background: linear-gradient(green, black, greenyellow);
+        border-color: green;
+      }
+      h2 {
+        color: white;
+        margin-top: 100px;
+        font-size: 40px;
+        font-style: unset;
+      }
+      input {
+        height: 50px;
+        width: 160px;
+        border-radius: 4px;
+        background-color: white;
+        border: green;
+        color: green;
+        text-align: center;
+        font-size: 15px;
+        font-weight: bolder;
+      }
+
+      #btn {
+        background-color: green;
+        color: white;
+        height: 40px;
+        width: 90px;
+        border-radius: 7px;
+        border: green;
+      }
+
+      ol {
+        color: white;
+        font-size: 25px;
+      }
+    </style>
+    
+  </body>
+</html>
